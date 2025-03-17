@@ -1,0 +1,19 @@
+type: DirectionLiquidBridge
+size: 1
+health: 100
+liquidCapacity: 80
+range: 3
+liquidPressure: 50
+enableDrawStatus: false
+solid: false
+placeableLiquid: true
+category: liquid
+requirements: [
+	item1-1/6
+	item1-2/8
+]
+research: channel1-1
+researchCost: [
+	item1-1/30
+	item1-2/30
+]

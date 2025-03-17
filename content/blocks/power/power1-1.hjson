@@ -1,0 +1,20 @@
+type: BeamNode
+range: 8
+health: 100
+category: power
+armor: 4
+requirements: [
+	item1-1/6
+]
+research: {
+parent: core1-1
+objectives: [
+{
+type: onSector
+preset: arrival
+}
+]
+}
+researchCost: [
+	item1-1/10
+]

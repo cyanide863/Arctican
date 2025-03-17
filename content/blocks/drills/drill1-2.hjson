@@ -1,0 +1,62 @@
+category: production
+hardnessDrillMultiplier: 25
+drillTime: 260
+size: 3
+type: burstDrill
+consumes: {
+    power: 1
+}
+tier: 2
+glowColor: 52667a
+arrowColor: 52667a 
+arrows: 1
+drillEffect: [
+{
+particles: 6
+length: 50
+lifetime: 80
+layer: 28
+sizeFrom: 7
+sizeTo: 4
+colorFrom: 52667a
+colorTo: 7d2b2b00
+sizeInterp: pow3Out
+interp: pow3Out
+}
+{
+particles: 8
+length: 70
+baseRotation: 32
+baseLength: 10
+cone: 10
+lifetime: 80
+sizeFrom: 4
+sizeTo: 0
+colorFrom: ffffff
+colorTo: 52667a
+sizeInterp: pow3Out
+interp: pow3Out
+}
+{
+type: WaveEffect
+sizefrom: 0
+sizeTo: 50
+layer: 28
+strokeFrom: 6
+strokeTo: 0
+lifetime: 20
+colorTo: 52667a 
+} 
+]
+shake: 6
+itemCapacity: 20
+fogRadius: 2
+requirements: [
+item1-1/60
+item1-2/40
+]
+researchCost: [
+item1-1/15
+item1-2/10
+]
+research: drill1-1

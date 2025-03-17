@@ -1,0 +1,138 @@
+type: PowerTurret 
+size: 2 
+research: core1-1
+envEnabled: 10
+envDisabled: 2
+category: turret 
+health: 150
+shootSound: cannon
+consumes: {
+    power: 2.5
+    liquid: {
+        liquid: gas1-1
+        amount: 0.3
+        optional: false
+    }
+}
+requirements: [ 
+item1-1/40
+item1-2/65 
+]
+outlineColor: 1b1c21 
+targetGround: true 
+reload: 150
+range: 100
+rotateSpeed: 5.0
+shootCone: 20
+shootType: {
+    type: BasicBulletType
+    sprite: large-orb
+	buildingDamageMultiplier: 0.15
+    shootEffect: {
+        type: particleEffect
+        sizeFrom: 5
+        sizeTo: 0
+        cone: 20
+        length: 20
+        lifetime: 65
+        colorFrom: ffffff
+        colorTo: d5c5eb
+    }
+    smokeEffect: none
+    hitSound: dullExplosion
+    width: 16
+    height: 16
+    shrinkY: -0.1
+    shrinkX: -0.1
+    speed: 4
+    lifetime: 25
+    damage: 40
+    splashDamage: 90
+    splashDamageRadius: 10
+    backColor: d5c5eb
+    frontColor: ffffff
+    trailColor: d5c5eb
+    hitColor: d5c5eb
+    shootColor: d5c5eb
+    smokeColor: d5c5eb
+    hitEffect: [
+    {
+        type: particleEffect
+        cone: 360
+        sizeFrom: 5
+        sizeTo: 0
+        lifetime: 65
+        length: 30
+        colorFrom: ffffff
+        colorTo: d5c5eb
+    }
+    {
+        type: particleEffect
+        line: true
+        cone: 360
+        strokeFrom: 5
+        strokeTo: 0
+        lenFrom: 8
+        lenTo: 2
+        length: 40
+        lifetime: 65
+        colorFrom: ffffff
+        colorTo: d5c5eb
+    }
+    ]
+    trailWidth: 4
+    trailLength: 6
+    fragBullets: 5
+    fragRandomSpread: 0
+    fragSpread: 36
+    fragAngle: 180
+    fragLifeMin: 1
+    fragLifeMax: 1
+    fragBullet: {
+    type: BasicBulletType
+	buildingDamageMultiplier: 0.15
+    shootEffect: shootSmokeTitan
+    smokeEffect: shootBigColor
+    homingPower: 0.08
+    homingRange: 20
+    width: 8
+    height: 12
+    speed: 6
+    lifetime: 20
+    damage: 10
+    backColor: d5c5eb
+    frontColor: ffffff
+    trailColor: d5c5eb
+    hitColor: d5c5eb
+    shootColor: d5c5eb
+    smokeColor: d5c5eb
+    trailWidth: 2
+    trailLength: 6
+    }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: arctic-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -wing
+      mirror: true
+      under: false
+      progress: warmup
+      moveY: -1.5
+      moveX: 3.2
+      moveRot: -30
+    }
+    {
+      suffix: -glow
+      color: d5c5eb00
+      colorTo: d5c5eb
+      mixColor: d5c5eb00
+      mixColorTo: d5c5eb
+      blending: additive
+      progress: warmup
+    }
+  ]
+}
+research: tur1-1

@@ -1,0 +1,5 @@
+type: tallBlock
+variants: 2
+emitLight: true
+lightColor: c7ffcd60
+lightRadius: 40

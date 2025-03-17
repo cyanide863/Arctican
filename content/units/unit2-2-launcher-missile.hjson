@@ -1,0 +1,113 @@
+type: missile
+template: MissileUnitType
+flying: true
+speed: 3
+physics: false
+lifetime: 90
+rotateSpeed: 1.2
+hitSize: 5
+trailLength: 8
+trailScl: 2
+useUnitCap: false
+health: 220
+envEnabled: 10
+envDisabled: 2
+autoFindTarget: true
+homingDelay: 0
+circleTarget: false
+faceTarget: true
+trailColor: 8398d5
+outlineRadius: 3
+engineOffset: 4
+engineSize: 1.2
+drawOutlines: true
+aimDst: 4
+drawCell: false
+drawBody: true
+engineColor: 8398d5
+emitLight: true
+lightColor: 8398d560
+parts: [
+    {
+    type: FlarePart
+    radius: 16
+    y: -6
+    color1: 8398d5
+    progress: life
+    rotMove: 360
+    rotation: 45
+    followRotation: false
+    }
+]
+abilities: [
+  {
+    type: MoveEffectAbility
+    interval: 2
+    effect: {
+      type: ParticleEffect
+      particles: 5
+      length: 3.2
+      baseLength: 4
+      sizeFrom: 3
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: 8398d5
+    }
+    rotateEffect: true
+  }
+]
+range: 4
+hidden: true
+deathSound: explosion
+deathExplosionEffect: [
+  {
+    type: ParticleEffect
+    particles: 9
+    length: 50
+    lifetime: 60
+    baseLength: 4
+    sizeFrom: 5
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: 8398d5
+  }
+  {
+    type: WaveEffect
+    lifetime: 60
+    sizeFrom: 0
+    sizeTo: 20
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: 8398d5
+  }
+  {
+    type: ParticleEffect
+    particles: 15
+    length: 40
+    lifetime: 60
+    baseLength: 4
+    strokeFrom: 5
+    strokeTo: 0
+    lenFrom: 10
+    lenTo: 0
+    colorFrom: ffffff
+    colorTo: 8398d5
+  }
+]
+weapons: [
+  {
+    reload: 1
+    shootOnDeath: true
+    mirror: true
+    shootSound: exoripple
+    shootCone: 360
+    shake: 8
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 30
+      buildingDamageMultiplier: 0
+      splashDamageRadius: 16
+    }
+  } 
+]

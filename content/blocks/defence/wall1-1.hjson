@@ -1,0 +1,20 @@
+type: Wall
+size: 1
+health: 640
+category: defense
+squareSprite: false
+research: {
+  parent: core1-1
+  requirements: [
+    item1-2/80
+  ]
+  objectives: [
+    {
+      type: onSector
+      preset: arrival
+    }
+  ]
+}
+requirements: [
+  item1-2/8
+]

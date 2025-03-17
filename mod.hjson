@@ -1,0 +1,8 @@
+"displayName": "Arctican",
+"name": "arctic",
+"author": hyperium
+"description": "Void."
+"minGameVersion": "146",
+"version": "[cyan]0.01"
+dependencies: [
+]

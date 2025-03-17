@@ -1,0 +1,4 @@
+type: OreBlock
+itemDrop: item1-1
+variants: 4
+wallOre: true

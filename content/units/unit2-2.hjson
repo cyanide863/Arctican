@@ -1,0 +1,87 @@
+type: legs
+legCount: 6
+lockLegBase: true
+legExtension: -2
+legBaseOffset: 4
+legLength: 16
+legMaxLength: 1.1
+legMinLength: 0.2
+legSpeed: 0.25
+legGroupSize: 3
+legForwardScl: 1.05
+legLengthScl: 0.95
+legPhysicsLayer: false
+outlineRadius: 4
+hovering: true
+groundLayer: 60
+health: 1450
+armor: 12
+allowLegStep: true
+speed: 0.7
+hitSize: 15
+drag: 0.1
+envEnabled: 10
+envDisabled: 2
+legStraightness: 0
+outlineColor: 1b1c21
+research: 10j-06-unitreconstructor-mech
+researchCostMultiplier: 0.5
+weapons: [
+  {
+    x: 5.2
+    y: -1
+    reload: 40
+    mirror: true
+    alternate: true
+    shootStatus: slow
+    shootStatusDuration: 36
+    name: unit2-2-launcher
+    ejectEffect: none
+    shootSound: missileSmall
+    parts: [
+        {
+            type: regionPart
+            suffix: -missile
+            color: ffffff
+            mixColor: ffffff00
+            progress: reload
+            outline: true
+            mixColorTo: 8398d5
+            colorTo: ffffff00
+            under: true
+        }
+    ]
+    shootY: 1
+    bullet: {
+      instantDisappear: true
+      damage: 0
+      shootEffect: [
+      {
+        type: particleEffect
+        cone: 20
+        sizeFrom: 3
+        particles: 8
+        sizeTo: 0
+        lifetime: 25
+        length: 30
+        colorFrom: ffffff
+        colorTo: 8398d5
+      }
+      {
+        type: particleEffect
+        line: true
+        cone: 10
+        strokeFrom: 4
+        strokeTo: 0
+        lenFrom: 8
+        lenTo: 0
+        length: 50
+        lifetime: 30
+        colorFrom: ffffff
+        colorTo: 8398d5
+      }
+      ]
+      spawnUnit: unit2-2-launcher-missile
+    }
+  }
+]

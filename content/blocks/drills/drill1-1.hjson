@@ -1,0 +1,43 @@
+type: BeamDrill
+size: 3
+category: production
+placeableLiquid: true
+drillTime: 180
+tier: 1
+itemCapacity: 30
+liquidCapacity: 20
+optionalBoostIntensity: 1.5
+consumes: {
+    power: 1
+    liquids: {
+		liquids: [
+            gas1-1/0.6
+        ]
+		booster: true
+        optional: true
+    }
+}
+sparkColor: c7ffcd
+heatColor: c7ffcd
+boostHeatColor: d5c5eb
+sparks: 9
+sparkLife: 30
+sparkSpread: 40
+ambientSound: hum
+ambientSoundVolume: 0.1
+squareSprite: false
+requirements: [
+	item1-1/40
+]
+research: {
+parent: core1-1
+requirements: [ 
+item1-1/10
+]
+objectives: [
+{
+type: onSector
+preset: arrival
+}
+]
+}

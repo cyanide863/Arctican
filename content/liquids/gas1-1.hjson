@@ -1,0 +1,11 @@
+heatCapacity: 0
+explosiveness: 0.3
+temperature: 0.3
+coolant: false
+gas: true
+color: c5dbf100
+flammability: 0.2
+gasColor: d5c5eb
+barColor: d5c5eb
+incinerable: false
+lightColor: d5c5eb

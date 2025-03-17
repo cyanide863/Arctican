@@ -1,0 +1,23 @@
+type: CoreBlock
+name: Core: Essence
+description: Core of the base. Armored and stores a medium amount of items.
+requirements: [
+  item1-2/1820
+  item1-2/1190
+]
+isFirstTier: true
+size: 4
+squareSprite: false
+alwaysUnlocked: true
+unitType: unit1-1
+armor: 16
+health: 2200
+itemCapacity: 3000
+unitCapModifier: 6
+category: effect
+research: {
+  planet: arctican
+  root: true
+  name: Arctican
+  requiresUnlock: false
+}

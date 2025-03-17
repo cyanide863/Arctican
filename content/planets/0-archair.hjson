@@ -1,0 +1,20 @@
+radius: 3
+parent: sun
+orbitRadius: 120
+accessible: false
+lightParent: sun
+mesh: {
+  type: SunMesh
+  divisions: 7
+  octaves: 3
+  persistence: 0.5
+  scl: 2
+  pow: 1
+  mag: 1
+  colorScale: 1.2
+  colors: [
+    97a5f7,
+    aec6fc,
+    d1e4ff
+  ]
+}

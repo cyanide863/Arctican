@@ -1,0 +1,175 @@
+type: GenericCrafter
+size: 3
+health: 220
+squareSprite: false
+outputItems: [
+  item2-1/4
+]
+consumes: {
+  power: 1.5
+  items: [
+    item1-2/6
+  ]
+  liquids: [
+    gas1-1/0.6
+  ]
+}
+craftTime: 120
+craftEffect: {
+  type: MultiEffect
+  effects: [
+  {
+  type: RadialEffect
+  rotationSpacing: 72
+  amount: 5
+  lengthOffset: 3
+  layer: 118
+  effect: {
+    type: ParticleEffect
+    particles: 8
+    length: 70
+    lifetime: 100
+    cone: 20
+    useRotation: false
+    baseRotation: 32
+    sizeFrom: 5
+    sizeTo: 0
+    colorFrom: 9b8aab40
+    colorTo: 6e6e803000
+    interp: pow2
+    sizeInterp: pow3In
+    }
+  }
+  {
+  type: RadialEffect
+  rotationSpacing: 72
+  amount: 5
+  lengthOffset: 3
+  layer: 118
+  effect: {
+    type: ParticleEffect
+    line: true
+    particles: 4
+    length: 70
+    lifetime: 100
+    cone: 20
+    useRotation: false
+    baseRotation: 32
+    strokeFrom: 2
+    strokeTo: 0
+    lenFrom: 8
+    lenTo: 0
+    colorFrom: 9b8aab
+    colorTo: 6e6e80
+    }
+  }
+  {
+  type: RadialEffect
+  rotationSpacing: 72
+  amount: 5
+  lengthOffset: 3
+  layer: 118
+  effect: {
+    type: ParticleEffect
+    line: true
+    particles: 4
+    length: 70
+    lifetime: 100
+    cone: 20
+    useRotation: false
+    baseRotation: 32
+    strokeFrom: 2
+    strokeTo: 0
+    lenFrom: 8
+    startDelay: 30
+    lenTo: 0
+    colorFrom: 9b8aab
+    colorTo: 6e6e80
+    }
+  }
+  {
+  type: RadialEffect
+  rotationSpacing: 72
+  amount: 5
+  lengthOffset: 3
+  layer: 118
+  effect: {
+    type: ParticleEffect
+    line: true
+    particles: 3
+    length: 70
+    lifetime: 100
+    cone: 20
+    useRotation: false
+    baseRotation: 32
+    strokeFrom: 2
+    strokeTo: 0
+    lenFrom: 8
+    startDelay: 50
+    lenTo: 0
+    colorFrom: 9b8aab
+    colorTo: 6e6e80
+    }
+  }
+  ]
+}
+category: crafting
+research: {
+  parent: core1-1
+}
+requirements: [
+  item1-1/100
+  item1-2/80
+  item1-3/120
+]
+research: [
+  item1-1/1000
+  item1-2/800
+  item1-3/1200
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawCells
+      particles: 18
+      range: 10
+      recurrence: 10
+      lifetime: 30
+      radius: 2
+      particleColorFrom: 9b8aab
+      particleColorTo: ffffff
+      color: d98e6b
+    }
+    {
+      type: DrawParticles
+      particles: 30
+      particleLife: 70
+      particleRad: 8
+      color: 9b8aab
+    }
+    {
+      type: DrawCircles
+      strokeMax: 0.6
+      strokeMin: 0
+      timeScl: 190
+      color: 9b8aab
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      glowScale: 10
+      alpha: 1
+      color: 9b8aab
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.1
+itemCapacity: 24

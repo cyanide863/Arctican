@@ -1,0 +1,72 @@
+type: missile
+template: MissileUnitType
+flying: true
+speed: 1.5
+physics: false
+lifetime: 90
+rotateSpeed: 1.2
+hitSize: 5
+trailLength: 3
+trailScl: 2
+useUnitCap: false
+health: 220
+autoFindTarget: true
+homingDelay: 0
+circleTarget: false
+faceTarget: true
+trailColor: 535178
+outlineRadius: 0
+engineOffset: 0
+engineSize: 0
+drawOutlines: false
+aimDst: 4
+drawCell: false
+drawBody: false
+emitLight: true
+lightColor: 98a7b560
+parts: [
+    {
+    type: FlarePart
+    radius: 20
+    layer: 110
+    color1: 98a7b5
+    progress: life
+    rotMove: 360
+    rotation: 45
+    followRotation: false
+    }
+]
+abilities: [
+  {
+    type: MoveEffectAbility
+    interval: 4
+    effect: {
+      type: ParticleEffect
+      particles: 5
+      length: 3.2
+      baseLength: 4
+      sizeFrom: 3
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: 535178
+    }
+    rotateEffect: true
+  }
+]
+range: 4
+hidden: true
+weapons: [
+  {
+    reload: 1
+    shootOnDeath: true
+    mirror: true
+    shootCone: 360
+    shake: 1
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 90
+      buildingDamageMultiplier: 0
+      splashDamageRadius: 16
+    }
+  } 
+]

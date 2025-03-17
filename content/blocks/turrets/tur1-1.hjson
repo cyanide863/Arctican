@@ -1,0 +1,66 @@
+type: ItemTurret 
+size: 2 
+envEnabled: 10
+envDisabled: 2
+research: {
+parent: core1-1
+requirements: [ 
+item1-1/50
+item1-2/70 
+]
+objectives: [
+{
+type: onSector
+preset: arrival
+}
+]
+}
+category: turret 
+health: 150
+shootSound: shootAlt 
+requirements: [ 
+item1-1/50
+item1-2/70 
+]
+outlineColor: 1b1c21 
+targetGround: true 
+reload: 30
+range: 80 
+rotateSpeed: 5.0
+inaccuracy: 6
+shootCone: 20
+ammoTypes: {
+  item1-1: {
+    type: BasicBulletType
+	buildingDamageMultiplier: 0.15
+    shootEffect: shootSmokeTitan
+    smokeEffect: shootBigColor
+    width: 12
+    height: 16
+    speed: 6
+    lifetime: 30
+    damage: 40
+    backColor: 65a885
+    frontColor: ffffff
+    trailColor: 65a885
+    hitColor: 65a885
+    shootColor: 65a885
+    smokeColor: 65a885
+    trailWidth: 3
+    trailLength: 6
+  }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: arctic-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -front
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -1.5
+    }
+  ]
+}

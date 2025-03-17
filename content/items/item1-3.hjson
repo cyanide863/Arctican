@@ -1,0 +1,7 @@
+hardness: 1
+explosiveness: 0
+charge: 0
+cost: 1.5
+color: a9bcd4
+research: item1-2
+hiddenOnPlanets: [serpulo, erekir]

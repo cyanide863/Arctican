@@ -1,0 +1,126 @@
+//earthlike(?) planet, name is an easter egg referencing v6 exotic
+//also an example
+
+//generator - necessary to prevent crashes, even if you do not use numbered sectors
+//also accepts just doing generator: AsteroidGenerator
+//also these numbers are funny and i have no idea how they precisely work
+generator: {
+  berylChance: 0.45
+  iceChance: 0.15
+  ferricChance: 0.55
+  stoneChance: 2
+  radMin: 1500
+  radMax: 1500
+  berylliumScale: 4
+  copperScale: 0.6
+  scale: 25
+  mag: 0.5
+  thresh: 0.9
+  fscl: 30
+  fper: 0.4
+}
+//sector count - larger numbers mean exponentially more sectors, may crash above 4
+sectorSize: 2.8
+//terrain generation seed the planet uses for its sectors
+sectorSeed: 54
+//sector to start on - probably make this a preset sector
+startSector: 12
+//parent to orbit around and follow
+parent: 0-archair
+//icon colour
+iconColor: 63ad7a
+//radius from the planet's "surface" that the atmosphere blur begins
+atmosphereRadIn: 0
+//radius where it fades away - this can have visual issues if above 0.25
+atmosphereRadOut: 0.35
+//colour of the atmosphere
+atmosphereColor: 3898a1
+//orbit radius, measured in units i do not know
+orbitRadius: 39
+//angle of the starting position of the orbit, so that all planets are not in the same line 
+orbitOffset: 320
+//time taken to complete one full orbit, in seconds
+orbitTime: 1600
+//time in ticks that it takes for one day to pass on the planet
+tidalLock: true
+updateLighting: false
+accessible: true
+alwaysUnlocked: true
+//whether to allow launching to numbered sectors - set to false for erekir sector behaviour
+allowLaunchToNumbered: false
+//planet environmental factors
+//content unlocked when landing on this planet
+//planet icon 
+icon: command
+//various rules
+allowLaunchSchematics: false
+allowLaunchLoadout: false
+allowWaveSimulation: false
+allowSectorInvasion: false
+clearSectorOnLose: true
+prebuildBase: true
+allowWaves: false
+allowLaunchToNumbered: false
+enemyBuildSpeedMultiplier: 1
+//default core to launch with
+//visual mesh made of hexagons - note that JSON only supports NoiseMesh and HexSkyMesh
+//use objects {} to make a single mesh, and the below format to create multiple
+mesh: [
+  {
+    type: NoiseMesh
+    divisions: 6
+    radius: 0.85
+    color1: 414057
+    color2: 6e6e80
+    octaves: 4.6
+    persistence: 0.9
+    scale: 0.6
+    mag: 0.6
+    coct: 4
+    cper: 1
+    cscl: 1.8
+    cthresh: 1
+  }
+  {
+    type: NoiseMesh
+    divisions: 6
+    radius: 0.9
+    color1: 392e40
+    color2: 54445e
+    octaves: 4.6
+    persistence: 0.9
+    scale: 1.2
+    mag: 0.6
+    coct: 4
+    cper: 1
+    cscl: 1.8
+    cthresh: 1
+  }
+]
+//mesh to use for drawing the clouds, essentially just a second mesh
+cloudMesh: [
+  {
+    type: HexSkyMesh
+    speed: 2
+    divisions: 6
+    radius: 0.11
+    color: e8effabb
+    octaves: 2
+    persistence: 0.6
+    scl: 0.9
+    thresh: 0.4
+  }
+]
+defaultCore: core1-1
+parent: 0-archair
+lightParent: 0-archair
+solarSystem: sun
+launchCandidates: []
+itemWhitelist: [
+  "item1-1",
+  "item1-2",
+  "item1-3",
+  "item2-1",
+  "item2-2",
+  "item2-3"
+]

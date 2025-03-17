@@ -1,0 +1,86 @@
+type: GenericCrafter
+size: 4
+health: 770
+squareSprite: false
+itemCapacity: 36
+outputItems: [
+  item2-3/6
+]
+consumes: {
+  power: 5
+  items: [
+    item1-3/6
+    item1-1/8
+  ]
+  liquids: [
+    gas1-2/0.6
+  ]
+}
+craftTime: 180
+craftEffect: {
+    type: ParticleEffect
+    particles: 6
+    length: 20
+    sizeFrom: 6
+    sizeTo: 0
+    colorFrom: b7d4ff
+    colorTo: b7d4ff00
+    lifetime: 120
+    baseLength: 8
+    sizeInterp: pow5Out
+}
+category: crafting
+research: {
+  parent: factory1-2
+}
+requirements: [
+  item1-1/90
+  item1-2/190
+  item1-3/340
+  item2-1/220
+]
+researchCost: [
+  item1-1/900
+  item1-2/1900
+  item1-3/3400
+  item2-1/2200
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawCircles
+      strokeMax: 0.9
+      strokeMin: 0.2
+      timeScl: 240
+      color: b7d4ff
+    }
+    {
+      type: DrawCrucibleFlame
+      particles: 50
+      flameRad: 3
+      circleSpace: 3
+      flameRadiusScl: 1.1
+      flameRadiusMag: 0.2
+      particleRad: 10
+      particleSize: 3
+      rotateScl: 3
+      flameColor: b7d4ff
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      glowScale: 10
+      alpha: 1
+      color: b7d4ff
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.1

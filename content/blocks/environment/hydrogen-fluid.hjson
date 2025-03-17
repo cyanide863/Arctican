@@ -1,0 +1,10 @@
+type: Floor
+variants: 0
+drownTime: 160
+status: hydrogen-sear
+statusDuration: 190
+dragMultiplier: 0.6
+speedMultiplier: 0.5
+cacheLayer: tar
+liquidDrop: gas1-2
+isLiquid: true
