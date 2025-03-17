@@ -1,0 +1,68 @@
+type: legs
+description: Fires a thermal lance at enemies. Can walk on most terrain
+legCount: 6
+lockLegBase: true
+legExtension: -2
+legBaseOffset: 3
+legLength: 9
+legMaxLength: 1.1
+legMinLength: 0.2
+legSpeed: 0.25
+legGroupSize: 3
+legForwardScl: 1.05
+legLengthScl: 0.95
+legPhysicsLayer: false
+legStraightness: 0.3
+hovering: true
+groundLayer: 60
+health: 670
+armor: 8
+allowLegStep: true
+speed: 0.7
+hitSize: 9
+drag: 0.1
+itemCapacity: 0
+envEnabled: 10
+envDisabled: 2
+outlineColor: 1b1c21
+research: 10j-03-unitconstructor-mech
+researchCostMultiplier: 0.5
+weapons: [
+  {
+    x: 0
+    y: 0
+    reload: 70
+    mirror: false
+    showStatSprite: false
+    name: unit2-1-weapon
+    ejectEffect: none
+    continuous: true
+    alwaysContinuous: true
+    shootSound: torch
+    shootStatus: slow
+    shootStatusDuration: 61
+    heatColor: d1e4ff 
+    shootY: 1.2
+    recoil: 0
+    bullet: {
+      type: ContinuousFlameBulletType
+      flareLength: 6
+      flareRotateSpeed: 2
+      flareColor: d1e4ff
+      length: 70
+      width: 1.6
+      damage: 7.5
+      pierceCap: 2
+      hitEffect: none
+      despawnEffect: none
+      hitColor: d1e4ff
+      colors: [
+      97a5f790
+      aec6fc
+      d1e4ff
+      ffffff
+      ]
+      lightColor: d1e4ff
+    }
+  }
+]

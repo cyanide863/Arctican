@@ -1,0 +1,18 @@
+type: LiquidRouter
+size: 3
+health: 900
+liquidCapacity: 250
+liquidPressure: 50
+enableDrawStatus: false
+solid: true
+placeableLiquid: true
+category: liquid
+requirements: [
+	item1-1/60
+    item1-2/230
+]
+research: channel1-2
+researchCost: [
+	item1-1/600
+    item1-2/460
+]

@@ -1,0 +1,57 @@
+type: ThermalGenerator
+health: 400
+attribute: heat
+displayEfficiency: false
+minEfficiency: 0.999
+category: power
+powerProduction: 0.5555555556
+generateEffect: {
+    type: ParticleEffect
+    particles: 5
+    length: 14
+    lifetime: 90
+    cone: 360
+    sizeFrom: 6
+    sizeTo: 3
+    colorFrom: ffffff
+    colorTo: d5c5eb00
+}
+effectChance: 0.025
+size: 3
+hasItems: false
+itemCapacity: 0
+hasLiquids: true
+outputLiquid: gas1-1/0.6
+liquidCapacity: 20
+ambientSound: flux
+ambientSoundVolume: 0.08
+researchCost: [
+  item1-1/25
+]
+requirements: [
+  item1-1/70
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawBlurSpin
+      suffix: -fan
+      blurThresh: 0.10
+      rotateSpeed: 5
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: gas1-1
+      padding: 9.5
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+research: power1-1

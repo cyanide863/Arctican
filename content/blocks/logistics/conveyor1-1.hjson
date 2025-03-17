@@ -1,0 +1,21 @@
+type: duct
+bridgeReplacement: conveyor1-1
+health: 60
+envEnabled: 10
+envDisabled: 2
+speed: 5
+requirements: [
+  item1-1/1
+]
+researchCost: [
+  item1-1/10
+]
+research: {
+parent: core1-1
+objectives: [
+{
+type: onSector
+preset: arrival
+}
+]
+}

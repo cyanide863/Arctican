@@ -1,0 +1,12 @@
+type: DuctRouter
+health: 60
+speed: 6
+requirements: [
+  item1-1/6
+]
+researchCost: [
+  item1-1/16
+]
+itemCapacity: 10
+recharge: 2
+research: conveyor1-1

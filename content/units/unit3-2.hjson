@@ -1,0 +1,199 @@
+type: hover
+hovering: true
+speed: 2
+health: 400
+armor: 4
+drag: 0.08
+envEnabled: 10
+envDisabled: 2
+accel: 0.06
+hitSize: 9
+rotateSpeed: 2.5
+omniMovement: false
+useEngineElevation: false
+faceTarget: false
+alwaysShootWhenMoving: true
+outlineColor: 1b1c21
+outlineRadius: 3
+engines: [
+    {
+        radius: 2.5
+        x: 7
+        y: -1
+        rotation: 315
+    }
+    {
+        radius: 2.5
+        x: -7
+        y: -1
+        rotation: -135
+    }
+    {
+        radius: 2
+        x: 8
+        y: -6
+        rotation: 315
+    }
+    {
+        radius: 2
+        x: -8
+        y: -6
+        rotation: -135
+    }
+]
+weapons: [
+  {
+    y: -3.5
+    x: 0
+    reload: 120
+    shootY: 6
+    shoot: {
+        shots: 6
+        type: shootSpread
+        spread: 16
+    }
+    mirror: false
+    alternate: true
+    rotate: true
+    name: unit3-2-weapon
+    ejectEffect: none
+    shootSound: plasma
+    shootY: 1
+    bullet: {
+    type: BasicBulletType
+	buildingDamageMultiplier: 0.15
+    sprite: arctic-electro
+    shootEffect: [
+  {
+    type: ParticleEffect
+    particles: 9
+    length: 20
+    cone: 30
+    lifetime: 30
+    baseLength: 4
+    sizeFrom: 5
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: aa93c4
+  }
+  {
+    type: ParticleEffect
+    particles: 15
+    line: true
+    length: 20
+    cone: 10
+    lifetime: 30
+    baseLength: 4
+    strokeFrom: 2
+    strokeTo: 0
+    lenFrom: 10
+    lenTo: 0
+    colorFrom: ffffff
+    colorTo: aa93c4
+  }
+    ]
+    smokeEffect: none
+    width: 16
+    height: 23
+    speed: 4
+    lifetime: 40
+    homingPower: 0.08
+    homingRange: 90
+    trailChance: 0.1
+    trailInterval: 5
+    trailRotation: true
+    trailEffect: {
+    type: ParticleEffect
+    particles: 3
+    length: 18
+    cone: 10
+    line: true
+    lifetime: 40
+    baseLength: 4
+    sizeFrom: 3
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: aa93c4
+  }
+    despawnHit: true
+    despawnEffect: [
+  {
+    type: ParticleEffect
+    particles: 9
+    length: 40
+    cone: 360
+    lifetime: 60
+    baseLength: 4
+    sizeFrom: 5
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: aa93c4
+  }
+  {
+    type: ParticleEffect
+    particles: 15
+    length: 30
+    line: true
+    cone: 360
+    lifetime: 60
+    baseLength: 2
+    strokeFrom: 5
+    strokeTo: 0
+    lenFrom: 10
+    lenTo: 0
+    colorFrom: ffffff
+    colorTo: aa93c4
+  }
+    ]
+    damage: 30
+    backColor: aa93c4
+    frontColor: ffffff
+    trailColor: aa93c4
+    hitColor: aa93c4
+    shootColor: aa93c4
+    smokeColor: aa93c4
+    trailWidth: 3
+    trailLength: 9
+    }
+  }
+  {
+    x: 0
+    y: 2
+    reload: 70
+    mirror: false
+    showStatSprite: false
+    name: unit3-2-ioner
+    ejectEffect: none
+    continuous: true
+    alwaysContinuous: true
+    shootSound: torch
+    heatColor: d1e4ff 
+    shootY: 1.2
+    shoot: {
+        shots: 3
+        spread: 6
+        type: shootSpread
+    }
+    recoil: 0
+    bullet: {
+      type: ContinuousFlameBulletType
+      flareLength: 6
+      flareRotateSpeed: 2
+      flareColor: aa93c4
+      length: 70
+      width: 1.6
+      damage: 7.5
+      pierceCap: 2
+      hitEffect: none
+      despawnEffect: none
+      hitColor: aa93c4
+      colors: [
+      5a447450
+      c5b0dd
+      aa93c4
+      ffffff
+      ]
+      lightColor: aa93c4
+    }
+  }
+]

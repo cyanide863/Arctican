@@ -1,0 +1,8 @@
+type: SteamVent
+blendGroup: deepstone
+parent: deepstone
+variants: 2
+effect: ventSteam
+attributes: {
+   heat: 1
+}

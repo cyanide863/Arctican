@@ -1,0 +1,24 @@
+type: LiquidJunction
+size: 1
+health: 100
+enableDrawStatus: false
+solid: false
+envEnabled: 10
+envDisabled: 2
+placeableLiquid: true
+category: liquid
+requirements: [
+	item1-1/2
+]
+research: {
+parent: core1-1
+objectives: [
+{
+type: onSector
+preset: arrival
+}
+]
+}
+researchCost: [
+	item1-1/10
+]

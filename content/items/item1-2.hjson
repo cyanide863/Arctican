@@ -1,0 +1,8 @@
+hardness: 0.8
+explosiveness: 0
+charge: 0
+cost: 0.5
+alwaysUnlocked: true
+color: 98a7b5
+research: item1-1
+hiddenOnPlanets: [serpulo, erekir]

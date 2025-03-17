@@ -1,0 +1,132 @@
+type: PowerTurret 
+size: 3
+research: {
+parent: tur1-1
+objectives: [
+]
+}
+category: turret 
+health: 150
+shootSound: malignShoot
+consumes: {
+    power: 2.5
+    liquid: {
+        liquid: gas1-1
+        amount: 0.3
+        optional: false
+    }
+}
+shoot: {
+    shots: 3
+    shotDelay: 8
+}
+requirements: [ 
+item1-1/120
+item1-2/100
+item1-3/60
+item2-1/100
+]
+outlineColor: 1b1c21 
+targetGround: true 
+reload: 150
+range: 100
+rotateSpeed: 5.0
+shootCone: 20
+shootType: {
+    type: BasicBulletType
+    sprite: large-orb
+	buildingDamageMultiplier: 0.15
+    homingDelay: 10
+    shootEffect: {
+        type: particleEffect
+        sizeFrom: 5
+        sizeTo: 0
+        cone: 20
+        length: 20
+        lifetime: 65
+        colorFrom: ffffff
+        colorTo: fcf497
+    }
+    smokeEffect: none
+    hitSound: dullExplosion
+    width: 14
+    height: 14
+    shrinkY: 0
+    speed: 6
+    lifetime: 40
+    damage: 50
+    splashDamage: 20
+    splashDamageRadius: 10
+    backColor: fcf497
+    frontColor: ffffff
+    trailColor: fcf497
+    hitColor: fcf497
+    shootColor: fcf497
+    smokeColor: fcf497
+    hitEffect: [
+    {
+        type: particleEffect
+        cone: 360
+        sizeFrom: 5
+        sizeTo: 0
+        lifetime: 20
+        length: 30
+        colorFrom: ffffff
+        colorTo: fcf497
+    }
+    {
+        type: particleEffect
+        line: true
+        cone: 360
+        strokeFrom: 5
+        strokeTo: 0
+        lenFrom: 8
+        lenTo: 2
+        length: 40
+        lifetime: 30
+        colorFrom: ffffff
+        colorTo: fcf497
+    }
+    ]
+    trailWidth: 4
+    trailLength: 6
+    homingPower: 1
+    pierce: true
+    pierceCap: 8
+    homingRange: 120
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: arctic-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -wing
+      mirror: true
+      under: false
+      progress: warmup
+      moveY: -1.5
+      moveX: 3.2
+      moveRot: -30
+    }
+    {
+      type: RegionPart
+      suffix: -section
+      mirror: true
+      under: false
+      progress: warmup
+      moveY: -1.5
+      moveX: 3.2
+      moveRot: -30
+    }
+    {
+      suffix: -heat
+      color: fcf49700
+      colorTo: fcf497
+      mixColor: fcf49700
+      mixColorTo: fcf497
+      blending: additive
+      progress: warmup
+    }
+  ]
+}

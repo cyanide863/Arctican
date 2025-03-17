@@ -1,0 +1,100 @@
+type: GenericCrafter
+size: 3
+health: 220
+squareSprite: false
+liquidCapacity: 20
+outputLiquid: liquid1-1/0.6
+consumes: {
+  power: 2.5
+  items: [
+    item1-1/3
+  ]
+  liquids: [
+    gas1-2/0.15
+  ]
+}
+craftTime: 180
+craftEffect: {
+  type: MultiEffect
+  effects: [
+  {
+  type: RadialEffect
+  rotationSpacing: 90
+  amount: 4
+  lengthOffset: 8
+  layer: 118
+  effect: surgeCruciSmoke 
+  }
+  {
+  type: RadialEffect
+  rotationSpacing: 90
+  amount: 4
+  lengthOffset: 8
+  layer: 118
+  effect: surgeCruciSmoke 
+  }
+  {
+  type: RadialEffect
+  rotationSpacing: 90
+  amount: 4
+  lengthOffset: 8
+  layer: 118
+  effect: surgeCruciSmoke 
+  }
+  ]
+}
+category: crafting
+research: {
+  parent: factory1-1
+}
+requirements: [
+  item1-1/90
+  item1-2/60
+  item1-3/100
+  item2-1/110
+]
+research: [
+  item1-1/900
+  item1-2/600
+  item1-3/1000
+  item2-1/1100
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawCells
+      particles: 25
+      range: 2
+      recurrence: 15
+      lifetime: 30
+      radius: 2
+      particleColorFrom: fcf497
+      particleColorTo: d98e6b
+      color: d98e6b
+    }
+    {
+      type: DrawCircles
+      strokeMax: 0.7
+      strokeMin: 0.4
+      timeScl: 220
+      color: e8d174
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      glowScale: 10
+      alpha: 1
+      color: e8d174
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.1
+itemCapacity: 24

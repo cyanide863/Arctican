@@ -1,0 +1,95 @@
+type: legs
+legCount: 6
+legLength: 9
+legBaseOffset: 4
+legSpeed: 0.25
+legForwardScl: 0.56
+legMoveSpace: 0.9
+hovering: true
+groundLayer: 60
+health: 600
+armor: 5
+envEnabled: 10
+envDisabled: 2
+legExtension: -2
+mineFloor: true
+mineWalls: true
+speed: 0.8
+legStraightness: 0.2
+hitSize: 6
+isEnemy: false
+mineSpeed: 5
+mineTier: 1
+buildSpeed: 1.5
+itemCapacity: 20
+alwaysUnlocked: true
+outlineColor: 1b1c21
+emitLight: true
+lightColor: 98a7b560
+mineWalls: true
+mineFloor: true
+abilities: [
+  {
+    type: MoveEffectAbility
+    minVelocity: 1.1
+    x: 0
+    y: -2.4
+    effect: artilleryTrailSmoke
+    color: 52667a
+    interval: 1.5
+  }
+]
+engines: [
+   {
+    x: 0
+    y: -6
+    radius: 3.5
+    rotation: -90
+   }
+ ]
+ weapons: [
+  {
+  widthSinMag: 0.1
+    x: 0
+    reload: 90
+    shootSound: missileSmall
+    y: 6
+    showStatSprite: false
+    shoot: {
+      type: shootSpread
+      shots: 2
+      shotDelay: 10
+    }
+    mirror: false
+    bullet: {
+      type: BasicBulletType
+      instantDisappear: true
+      spawnUnit: arctic-core-missile
+      }
+    }
+    {  
+      x: 0
+      y: 0
+      display: false
+      rotate: false
+      mirror: false
+      reload: 210
+      shootCone: 5
+      shootSound: none
+      bullet: {
+        width: 0
+        speed: 8
+        lifetime: 10
+        despawnEffect: none
+        hitEffect: none
+        height: 0
+        collides: false
+        damage: 0
+        pierce: true
+        pierceBuilding: true
+        recoil: -38
+        impact: true
+      }
+    }
+]
+research: core1-1
